@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-class AboutComponent extends Component{
+class SignupPage extends Component{
     render() {
         return (
             <div>
-                Day la trang about ne!
+                Trang dang ky
             </div>
         );
     }
 }
 
-export default AboutComponent;
+export default SignupPage;
