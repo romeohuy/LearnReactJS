@@ -5,21 +5,14 @@ class ContactPage extends Component{
     render() {
         return (
             <Container>
-                <Row>
+                <div className="footer">
                     <Col xl lg="4"><h4 className="hr-solid">Thông tin liên hệ</h4></Col>
-                </Row>
-                <Row>
                     <Col><strong>Nguyễn Thị Ngọc Huệ</strong></Col>
-                </Row>
-                <Row> 
                     <Col><strong>Điện thoại:</strong><span> 097 779 54 16</span></Col>
-                </Row>
-                <Row> 
                     <Col><strong>Facebook:</strong><span> <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/banhtrangngaomambinhdinh">https://www.facebook.com/banhtrangngaomambinhdinh</a></span></Col>
-                </Row>
-                <Row> 
                     <Col><strong>Địa chỉ:</strong><span> Chung cư RichStar, 278 Hòa Bình, Phú Thạnh, Tân Phú, Hồ Chí Minh, Vietnam</span></Col>
-                </Row>
+                </div>
+                
                 {/* <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
