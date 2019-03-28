@@ -18,6 +18,11 @@ export function getProduct(product_id){
     }
 }
 
+export function createProduct(productModel){
+    return (dispatch) => {
+        axios.post(`${url}/product`,productModel)
+    }
+}
 
 export function toggleClose() {
     return (dispatch) => {
