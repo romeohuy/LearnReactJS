@@ -1,0 +1,4 @@
+https://kipalog.com/posts/Tao-Single-Page-App-giong-Medium-bang-Reactjs-Redux-ket-hop-voi-Nodejs
+
+- 9/4/2019:
+ + Action in redux

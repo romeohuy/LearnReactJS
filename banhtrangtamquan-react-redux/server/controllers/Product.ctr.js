@@ -33,6 +33,37 @@ module.exports = {
             })
         }
     },
+    updateProduct: (req, res, next) => {
+        let { id, textcomment, title, shortcontent, feature_img, description, price } = req.body
+        if (req.files.image) {
+            cloudinary.uploader.upload(req.files.image.path, (result) => {
+                let obj = { id, textcomment, title, shortcontent, description, feature_img: result.url != null ? result.url : '', price }
+                saveProduct(obj)
+            },{
+                resource_type: 'image',
+                eager: [
+                    {effect: 'sepia'}
+                ]
+            })
+        }else {
+            saveProduct({ id, textcomment, title, shortcontent, description, feature_img, price })
+        }
+
+        function saveProduct(obj) {
+            new Product(obj).save((err, product) => {
+                if (err)
+                    res.send(err)
+                else if (!product)
+                    res.send(400)
+                else {
+                    return product.addAuthor(req.body.author_id).then((_product) => {
+                        return res.send(_product)
+                    })
+                }
+                next()
+            })
+        }
+    },
     getAll: (req, res, next) => {
         Product.find(req.params.id)
         .populate('author')

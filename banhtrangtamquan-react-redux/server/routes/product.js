@@ -15,6 +15,12 @@ module.exports = (router) => {
         .route('/product')
         .post(multipartWare, productcontroller.addProduct)
     /**
+     * update an product
+     */
+    router
+        .route('/updateproduct/:id')
+        .post(multipartWare, productcontroller.updateProduct)
+    /**
      * comment on an product
      */
     router
@@ -25,5 +31,6 @@ module.exports = (router) => {
      */
     router
         .route('/product/:id')
-        .get(productcontroller.getProduct)
+        .get(productcontroller.getProduct)   
+    
 }

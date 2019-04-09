@@ -12,9 +12,9 @@ const router = express.Router()
 const url = process.env.MONGODB_URI || "mongodb://localhost:27017/banhtrangtamquan_db"
 /** configure cloudinary */
 cloudinary.config({
-    cloud_name: 'YOUR_CLOUDINARY_NAME_HERE',
-    api_key: 'YOUR_CLOUDINARY_API_KEY_HERE',
-    api_secret: 'YOUR_CLOUDINARY_API_SECRET_HERE'
+    cloud_name: 'dvoteyfga',
+    api_key: '922272979514934',
+    api_secret: '-_VBr410kekd4PCy65fEwjgXWsg'
 })
 /** connect to MongoDB datastore */
 try {
